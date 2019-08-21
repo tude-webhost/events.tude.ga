@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 574 121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(0.753957,0,0,0.753957,-167.686,-167.686)">
+        <g transform="matrix(0.42845,0,0,0.42845,193.658,101.436)">
+            <g transform="matrix(15.1799,0,0,1,-1660.42,-46.7015)">
+                <rect x="113.804" y="329.049" width="24.182" height="23.351" style="fill:white;"/>
+            </g>
+            <g transform="matrix(-15.1799,9.7073e-17,6.74716e-18,-1,2161.71,983.757)">
+                <rect x="113.804" y="329.049" width="24.182" height="23.351" style="fill:white;"/>
+            </g>
+            <g transform="matrix(9.42855e-16,15.398,-1,6.12323e-17,763.238,-1470)">
+                <rect x="113.804" y="329.049" width="24.182" height="23.351" style="fill:white;"/>
+            </g>
+            <g transform="matrix(-8.60498e-16,-15.398,1,-6.63083e-17,-261.898,2407.05)">
+                <rect x="113.804" y="329.049" width="24.182" height="23.351" style="fill:white;"/>
+            </g>
+            <g>
+                <text x="113.1px" y="452.149px" style="font-family:'Montserrat-Bold', 'Montserrat';font-weight:700;font-size:175.857px;fill:white;">T<tspan x="262.403px " y="452.149px ">U</tspan></text>
+                <text x="113.1px" y="608.007px" style="font-family:'Montserrat-Bold', 'Montserrat';font-weight:700;font-size:175.857px;fill:white;">D<tspan x="270.668px " y="608.007px ">E</tspan></text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,110.653,-228.669)">
+            <text x="326.343px" y="582.197px" style="font-family:'Montserrat-BoldItalic', 'Montserrat';font-weight:700;font-style:italic;font-size:148.412px;fill:rgb(229,156,48);">E<tspan x="425.186px 511.71px " y="582.197px 582.197px ">ve</tspan>nts</text>
+        </g>
+    </g>
+</svg>

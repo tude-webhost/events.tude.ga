@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tude Events</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./style/gtheme.css">
+    <link rel="stylesheet" type="text/css" href="./style/gheader.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <gheader theme="light" :hide="scrolled"></gheader>
+
+        <div id="content">
+            <div id="header">
+                <img src="assets/events_logo.svg">
+            </div>
+            <div id="ui">
+                <div id="nav">
+                    <a href="#" @click="panel='news'" :class="{active:panel=='news'}">News</a>
+                    <a href="#" @click="panel='about'" :class="{active:panel=='about'}">About</a>
+                    <a href="#" @click="panel='schedule'" :class="{active:panel=='schedule'}">Schedule</a>
+                    <a href="#" @click="panel='register'" :class="{active:panel=='register'}">Register</a>
+                </div>
+                <div id="tab">
+                    <panel name="news">
+                        <box>
+                            <h1>Season 2</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem....
+                                <a href="#">Read more</a>
+                            </p>
+                        </box>
+                        <box>
+                            <h1>Roadmap</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd....  
+                                <a href="#">Read more</a>
+                            </p>
+                        </box>
+                    </panel>
+                    <panel name="about">
+                        <h1>Tude Events, huh?</h1>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem....</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd....  </p>
+                    </panel>
+                    <panel name="schedule">
+                        <h1>schedule</h1>
+                    </panel>
+                    <panel name="register">
+                        <h1>register</h1>
+                    </panel>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template id="t-panel">
+        <div v-if="this.$parent.panel==name" class="panel">
+            <slot></slot>
+            <div id="footer">COPYRIGHT &copy; 2019 TUDE &bull; MNXSOFTWARE &bull; <a href="https://tude.ga/legal">LEGAL NOTICE</a></div>
+        </div>
+    </template>
+
+    <template id="t-box">
+        <div class="box">
+            <slot></slot>
+        </div>
+    </template>
+
+    <script src="./lib/glib.js"></script>
+    <script src="./lib/gheader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
