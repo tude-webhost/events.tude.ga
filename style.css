@@ -52,11 +52,23 @@ html, body, #app {
     min-height: 300px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 #header > img {
     width: 30%;
 }
+
+#infobox {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-right: 100px;
+    border-left: none;
+    border-bottom: 5px solid var(--orange);
+}
+#infobox > * { margin-bottom: 0; }
 
 #ui {
     width: 100%;
@@ -113,6 +125,9 @@ html, body, #app {
     transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .box:hover { transform: var(--transf) scale(1.05); }
+.box[onclick]:not([onclick=""]) { cursor: pointer; }
+.box[onclick]:not([onclick=""]):active { transform: scale(.95) }
+.box[onclick]:not([onclick=""]) > * { user-select: none; }
 
 h1 {
     display: block;
@@ -121,6 +136,24 @@ h1 {
     font-size: 30px;
     color: var(--orange);
     margin-bottom: 20px;
+}
+
+h2 {
+    display: block;
+    font-family: var(--font-nav);
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+h3 {
+    display: block;
+    font-family: var(--font-nav);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--white);
+    opacity: .5;
 }
 
 p {

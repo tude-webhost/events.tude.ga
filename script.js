@@ -7,7 +7,7 @@ Vue.component('panel', {
 });
 
 Vue.component('box', {
-    props: [ ],
+    props: [ 'click' ],
     template: '#t-box'
 });
 
@@ -30,6 +30,10 @@ document.addEventListener('mousemove', function(e) {
         bounds = obj.getBoundingClientRect();
         let xAxis = (bounds.left+(bounds.right-bounds.left)/2 - e.pageX) / 100;
         let yAxis = -(bounds.top+(bounds.bottom-bounds.top)/2 - e.pageY) / 50;
+        if (obj.hasAttribute('strong3d')) {
+            xAxis *= 3;
+            yAxis *= 3;
+        }
         obj.style.setProperty('--transf', `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`);
     }
 });

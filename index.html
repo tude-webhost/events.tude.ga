@@ -21,6 +21,11 @@
         <div id="content">
             <div id="header">
                 <img src="assets/events_logo.svg">
+                <box id="infobox" click="app.panel='schedule'" strong3d>
+                    <h1>Next up:</h1>
+                    <h2>"Storytime"</h2>
+                    <h3>4th September 2019</h3>
+                </box>
             </div>
             <div id="ui">
                 <div id="nav">
@@ -70,7 +75,7 @@
     </template>
 
     <template id="t-box">
-        <div class="box">
+        <div class="box" :onclick="click?`eval(${click})`:''">
             <slot></slot>
         </div>
     </template>
