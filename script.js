@@ -54,7 +54,7 @@ const eventTypes = {
 
 var scheduleRaw = [ ];
 
-fetch('http://pd.tude.ga/events/schedule.json')
+fetch(location.protocol + '//pd.tude.ga/events/schedule.json')
     .catch(console.error)
     .then(obj => obj.json())
     .catch(console.error)
