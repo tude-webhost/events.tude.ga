@@ -16,7 +16,7 @@ app = new Vue({
     el: '#app',
     data: {
         scrolled: false,
-        panel: 'schedule',
+        panel: 'news',
 
         scheduleDisp: [ ]
     }
