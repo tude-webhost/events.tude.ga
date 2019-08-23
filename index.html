@@ -57,10 +57,23 @@
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd....  </p>
                     </panel>
                     <panel name="schedule">
-                        <h1>schedule</h1>
+                        <div v-for="w of scheduleDisp">
+                            <h4 v-html="w.title" :class="{gray:!w.entries.length}"></h4>
+                            <box v-if="w.entries.length" class="no3d" v-for="e of w.entries">
+                                <h1 class="dense" v-html="e.time"></h1>
+                                <h2 class="dense light" v-html="e.title"></h2>
+                                <h3 v-html="e.desc"></h3>
+                                <button onclick="">Take Part</button>
+                            </box>
+                            <box v-if="!w.entries.length" class="gray">
+                                <h3>No events scheduled.</h3>
+                            </box>
+                        </div>
+                        <p><br><a href="#" onclick="parseSchedule()">Load more</a></p>
                     </panel>
                     <panel name="register">
-                        <h1>register</h1>
+                        <h1>Participate</h1>
+                        <p>Woopsie doopsie, this page is still wip, check back later!</p>
                     </panel>
                 </div>
             </div>
@@ -68,9 +81,9 @@
     </div>
 
     <template id="t-panel">
-        <div v-if="this.$parent.panel==name" class="panel">
+        <div v-if="this.$parent.panel==name" class="panel" :name="name">
             <slot></slot>
-            <div id="footer">COPYRIGHT &copy; 2019 TUDE &bull; MNXSOFTWARE &bull; <a href="https://tude.ga/legal">LEGAL NOTICE</a></div>
+            <div id="footer">COPYRIGHT &copy; 2019 TUDE &bull; <a href="https://tude.ga/legal">LEGAL NOTICE</a> &bull; WEBSITE MADE BY <a href="https://maanex.tk/">MAANEX</a></div>
         </div>
     </template>
 
